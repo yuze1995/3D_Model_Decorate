@@ -1,0 +1,66 @@
+﻿/*******************下拉式選單*******************/
+#Style { width: 240px; height: 34px; overflow: hidden; background: url(../image/down_arrow_select.jpg) no-repeat right #ddd; border: 1px solid #ccc; font-family: Microsoft JhengHei; padding: 5px; font-size: 16px; line-height: 1; border: 0; border-radius: 0; height: 34px; -webkit-appearance: none; cursor: url("../image/mouse.cur"),default; }
+
+    #Style option:hover { cursor:url(../image/mouse.cur), default; }
+/************************************************/
+
+
+/********************模型列表********************/
+#ObjList { table-layout: fixed; margin-left: 0px; margin-right: 10px; width: 320px; height:560px; }
+
+#ObjList tr:nth-child(odd) { background-color: #eee; }
+
+#ObjList tr:nth-child(even) { background-color: #fff; }
+
+#ObjList tr:hover { font-size:large; background-color: #00f9ff; font-weight: bold; }
+
+#ObjList tr td .productName{ height: 35px; width: 320px; padding-left: 10px; font-size: x-large; font-family:'Microsoft JhengHei'; font-weight:bold; white-space: nowrap; text-overflow: ellipsis; -o-text-overflow: ellipsis; overflow: hidden; }
+
+#ObjList tr td .productColor{ height: 25px; width: 100%; padding-left: 10px; }
+
+#ObjList tr td div i { box-shadow: 0 4px 4px -2px #232323; -moz-box-shadow: 0 4px 4px -2px #232323; -webkit-box-shadow: 0 4px 4px -2px #232323; background-color: rgba(0, 0, 0, 0);}
+
+#ObjList tr td div i .fa-circle { margin-right: 10px; padding: 10px;}
+
+.fa-circle { margin-right: 10px; }
+/************************************************/
+
+
+/**********************提示**********************/
+#tip { width: 300px; height:280px; background-image:url("../image//tip.jpg"); background-size:320px; background-repeat:no-repeat; }
+/************************************************/
+
+
+/********************Loading*********************/
+.fa-pulse { font-size: 100px; position: absolute; top: 410px; left: 410px; }
+/************************************************/
+
+
+/********************控制面板********************/
+#basicDiv { height: 40px; width: 100px; background-color: white; position: absolute; top: 12px; left: 12px; z-index: 20; padding: 10px; box-shadow: 0 4px 4px -2px #232323; -moz-box-shadow: 0 4px 4px -2px #232323; -webkit-box-shadow: 0 4px 4px -2px #232323; }
+
+#rotateDiv { height: 40px; width: 100px; background-color: white; position: absolute; top: 12px; left: 1172px; z-index: 20; padding: 10px; display: none; box-shadow: 0 4px 4px -2px #232323; -moz-box-shadow: 0 4px 4px -2px #232323; -webkit-box-shadow: 0 4px 4px -2px #232323; }
+
+.firstBtn { width: 45px; height: 40px; float: left; margin-right: 10px; text-align: center; }
+
+    .firstBtn :hover { color: #41bfff; }
+
+    .firstBtn :active { color: #3498cc; }
+
+    .firstBtn i { font-size: 43px; }
+
+.secondBtn { width: 45px; height: 40px; float: left; text-align: center; }
+
+    .secondBtn :hover { color: #41bfff; }
+
+    .secondBtn :active { color: #3498cc; }
+
+    .secondBtn .fa { font-size: 43px; }
+/************************************************/
+
+
+/**********************其他**********************/
+body { cursor: url("../image/mouse.cur"),default; }
+/************************************************/
+
+

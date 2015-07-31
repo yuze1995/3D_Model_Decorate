@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>3D Model Decorate</title>
+    <link rel="stylesheet" type="text/css" href="./css/FurnitureDecorate.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <script src="./js/jquery-1.9.1.min.js"></script>
+    <script src="./js/jquery-ui-1.8.24.min.js"></script>
+    <script src="./js/ThreeJs/three.min.js"></script>
+    <script src="./js/ThreeJs/OBJMTLLoader.js"></script>
+    <script src="./js/ThreeJs/MTLLoader.js"></script>
+    <script src="./js/ThreeJs/Detector.js"></script>
+    <script src="./js/html2canvas.js"></script>
+    <script src="./js/FurnitureDecorate.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <div id="3DView" style="width:1280px;height:900px;border:solid 1px;"></div>
+            </td>
+            <td>
+                <div class="row" style="height:900px;float:left;width:320px;border:solid 1px;">
+                    <table>
+                        <tr>
+                            <td style="width:100px;text-align:right;font-family:Microsoft JhengHei;">選擇風格：</td>
+                            <td>
+                                <select id="Style">
+                                    <option value="1">美式風</option>
+                                    <option value="2">北歐風</option>
+                                    <option value="3">日式風</option>
+                                    <option value="4">簡約風</option>
+                                    <option value="5">鄉村風</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="height:850px;">
+                        <table id="ObjList" style="overflow-x: hidden; overflow-y: auto;">
+                            <tbody>
+                                <tr style="height:60px;" title="雙人座木椅" data-xscale="0.4" data-yscale="0.4" data-zscale="0.4" data-objtype="2">
+                                    <td style="width:auto;padding:0px;">
+                                        <div class="productName">
+                                            雙人座木椅
+                                        </div>
+                                        <div class="productColor">
+                                            <i class="fa fa-circle" style="color:#7f7f7f;" data-objpath="./model/woodbench_origin/woodbench.obj" data-mtlpath="./model/woodbench_origin/woodbench.mtl" data-ischoosed="false"></i>
+                                            <i class="fa fa-circle" style="color:blue;" data-objpath="./model/woodbench_blue/woodbench.obj" data-mtlpath="./model/woodbench_blue/woodbench.mtl" data-ischoosed="false"></i>
+                                            <i class="fa fa-circle" style="color:green;" data-objpath="./model/woodbench_green/woodbench.obj" data-mtlpath="./model/woodbench_green/woodbench.mtl" data-ischoosed="false"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="height:60px;" title="bed" data-xscale="0.06" data-yscale="0.06" data-zscale="0.06" data-objtype="3">
+                                    <td style="width:auto;padding:0px;">
+                                        <div class="productName">
+                                            床
+                                        </div>
+                                        <div class="productColor">
+                                            <i class="fa fa-circle" style="color:#8c0000;" data-objpath="./model/bed1_orange/bed1_orange.obj" data-mtlpath="./model/bed1_orange/bed1_orange.mtl" data-ischoosed="false"></i>
+                                            <i class="fa fa-circle" style="color:#a0b95d;" data-objpath="./model/bed1_green/bed1_green.obj" data-mtlpath="./model/bed1_green/bed1_green.mtl" data-ischoosed="false"></i>
+                                            <i class="fa fa-circle" style="color:#60bcc9;" data-objpath="./model/bed1_blue/bed1_blue.obj" data-mtlpath="./model/bed1_blue/bed1_blue.mtl" data-ischoosed="false"></i>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="height:60px;" title="餐椅" data-xscale="0.9" data-yscale="0.9" data-zscale="0.9" data-objtype="1">
+                                    <td style="width:auto;padding:0px;">
+                                        <div class="productName">
+                                            餐椅
+                                        </div>
+                                        <div class="productColor">
+                                            <i class="fa fa-circle" style="color:blue;" data-objpath="./model/chair1_blue/chair1_blue.obj" data-mtlpath="./model/chair1_blue/chair1_blue.mtl" data-ischoosed="false"></i>
+                                            <i class="fa fa-circle" style="color:#FF1E00;" data-objpath="./model/chair1_red/chair1_red.obj" data-mtlpath="./model/chair1_red/chair1_red.mtl" data-ischoosed="false"></i>
+                                            <i class="fa fa-circle" style="color:white;" data-objpath="./model/chair1_white/chair1_white.obj" data-mtlpath="./model/chair1_white/chair1_white.mtl" data-ischoosed="false"></i>
+                                            <i class="fa fa-circle" style="color:#199A00;" data-objpath="./model/chair1_green/chair1_green.obj" data-mtlpath="./model/chair1_green/chair1_green.mtl" data-ischoosed="false"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="height:60px;" title="床頭櫃" data-xscale="0.1" data-yscale="0.1" data-zscale="0.1" data-objtype="2">
+                                    <td style="width:auto;padding:0px;">
+                                        <div class="productName">
+                                            床頭櫃
+                                        </div>
+                                        <div class="productColor">
+                                            <i class="fa fa-circle" style="color:white;" data-objpath="./model/case1_white/case1_white.obj" data-mtlpath="./model/case1_white/case1_white.mtl" data-ischoosed="false"></i>
+                                            <i class="fa fa-circle" style="color:#FAA460" data-objpath="./model/case1_skin/case1_skin.obj" data-mtlpath="./model/case1_skin/case1_skin.mtl" data-ischoosed="false"></i>
+                                            <i class="fa fa-circle" style="color:#8B0000;" data-objpath="./model/case1_wine/case1_wine.obj" data-mtlpath="./model/case1_wine/case1_wine.mtl" data-ischoosed="false"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="height:60px;" title="玻璃櫥櫃" data-xscale="0.9" data-yscale="0.9" data-zscale="0.9" data-objtype="2">
+                                    <td style="width:auto;padding:0px;">
+                                        <div class="productName">
+                                            玻璃櫥櫃
+                                        </div>
+                                        <div class="productColor">
+                                            <i class="fa fa-circle" style="color:#DCDCDC;" data-objpath="./model/cupboard1_white/cupboard1_white.obj" data-mtlpath="./model/cupboard1_white/cupboard1_white.mtl" data-ischoosed="false"></i>
+                                            <i class="fa fa-circle" style="color:#C46B1C;" data-objpath="./model/cupboard1_orange/cupboard1_orange.obj" data-mtlpath="./model/cupboard1_orange/cupboard1_orange.mtl" data-ischoosed="false"></i>
+                                            <i class="fa fa-circle" style="color:#696969;" data-objpath="./model/cupboard1_gray/cupboard1_gray.obj" data-mtlpath="./model/cupboard1_gray/cupboard1_gray.mtl" data-ischoosed="false"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="height:60px;" title="單人沙發" data-xscale="0.75" data-yscale="0.75" data-zscale="0.75" data-objtype="2">
+                                    <td style="width:auto;padding:0px;">
+                                        <div class="productName">
+                                            單人沙發
+                                        </div>
+                                        <div class="productColor">
+                                            <i class="fa fa-circle" style="color:#4f4232;" data-objpath="./model/sofa1_gray/sofa1_gray.obj" data-mtlpath="./model/sofa1_gray/sofa1_gray.mtl" data-ischoosed="false"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="height:60px;" title="木製書櫃" data-xscale="0.75" data-yscale="0.75" data-zscale="0.75" data-objtype="2">
+                                    <td style="width:auto;padding:0px;">
+                                        <div class="productName">
+                                            木製書櫃
+                                        </div>
+                                        <div class="productColor">
+                                            <i class="fa fa-circle" style="color:#4f4232;" data-objpath="./model/bookcase1_brown/bookcase1_brown.obj" data-mtlpath="./model/bookcase1_brown/bookcase1_brown.mtl" data-ischoosed="false"></i>
+                                            <i class="fa fa-circle" style="color:#e3bd60;" data-objpath="./model/bookcase1_brown2/bookcase1_brown.obj" data-mtlpath="./model/bookcase1_brown2/bookcase1_brown.mtl" data-ischoosed="false"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="height:60px;" title="木製書桌" data-xscale="0.95" data-yscale="0.95" data-zscale="0.95" data-objtype="2">
+                                    <td style="width:auto;padding:0px;">
+                                        <div class="productName">
+                                            木製書桌
+                                        </div>
+                                        <div class="productColor">
+                                            <i class="fa fa-circle" style="color:#356d36;" data-objpath="./model/desk1_green/desk1_green.obj" data-mtlpath="./model/desk1_green/desk1_green.mtl" data-ischoosed="false"></i>
+                                            <i class="fa fa-circle" style="color:#000000;" data-objpath="./model/desk1_black/desk1_black.obj" data-mtlpath="./model/desk1_black/desk1_black.mtl" data-ischoosed="false"></i>
+                                            <i class="fa fa-circle" style="color:#e78205;" data-objpath="./model/desk1_orange/desk1_orange.obj" data-mtlpath="./model/desk1_orange/desk1_orange.mtl" data-ischoosed="false"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="height:60px;" title="玻璃桌" data-xscale="1.6" data-yscale="1.6" data-zscale="1.6" data-objtype="3">
+                                    <td style="width:auto;padding:0px;">
+                                        <div class="productName">
+                                            玻璃桌
+                                        </div>
+                                        <div class="productColor">
+                                            <i class="fa fa-circle" style="color:#000000;" data-objpath="./model/glasstable1_black/glasstable1_black.obj" data-mtlpath="./model/glasstable1_black/glasstable1_black.mtl" data-ischoosed="false"></i>
+                                            <i class="fa fa-circle" style="color:#f2eee9;" data-objpath="./model/glasstable1_white/glasstable1_white.obj" data-mtlpath="./model/glasstable1_white/glasstable1_white.mtl" data-ischoosed="false"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="width:320px;height:300px;padding:10px 10px 10px 0px;">
+                            <div id="tip"></div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div id='mask' style='position:absolute;top:11px;left:11px;'><div style='width:1280px;height:900px;background-color:#AAAAAA;text-align:center;opacity:0.5'></div><i class='fa fa-spinner fa-pulse'></i><div style="font-size: 100px; position: absolute; top: 390px; left: 510px;">LOADING</div></div>
+    <div id="basicDiv"><div class="firstBtn"><i class="fa fa-picture-o" title="擷取圖片"></i></div><div class="secondBtn"><i class="fa fa-refresh" title="清除場景"></i></div></div>
+    <div id="rotateDiv"><div class="firstBtn"><i class="fa fa-share" title="順時針45度"></i></div><div class="secondBtn"><i class="fa fa-reply" title="逆時針45度"></i></div></div>
+</body>
+</html>

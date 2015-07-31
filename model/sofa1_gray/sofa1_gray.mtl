@@ -1,0 +1,56 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 23.05.2015 16:15:14
+
+newmtl Material__150398
+	Ns 39.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0039 0.0039 0.0039
+	Kd 0.3294 0.2196 0.0863
+	Ks 4.6024 4.6024 4.6024
+	Ke 0.0000 0.0000 0.0000
+
+newmtl drewno
+	Ns 25.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0039 0.0039 0.0039
+	Kd 0.2157 0.2157 0.2157
+	Ks 0.6892 0.6892 0.6892
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\DREWNO 1.JPG
+	map_Kd maps\DREWNO 1.JPG
+
+newmtl logo
+	Ns 53.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.3059 0.3059 0.3059
+	Kd 0.3059 0.3059 0.3059
+	Ks 0.0396 0.0396 0.0396
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\LOGO.JPG
+	map_Kd maps\LOGO.JPG
+
+newmtl Material__1501
+	Ns 13.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0039 0.0039 0.0039
+	Kd 0.2157 0.2157 0.2157
+	Ks 0.2614 0.2614 0.2614
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\TAPIC 4.JPG
+	map_Kd maps\TAPIC 4.JPG
