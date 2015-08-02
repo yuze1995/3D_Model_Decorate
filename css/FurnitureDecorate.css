@@ -61,6 +61,8 @@
 
 /**********************其他**********************/
 body { cursor: url("../image/mouse.cur"),default; }
+html, body, div, span, label,
+table, caption, tbody, tfoot, thead, tr, th, td { font: 13px Verdana,"Trebuchet MS", Arial; font-weight: normal; }
 /************************************************/
 
 

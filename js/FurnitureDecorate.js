@@ -44,7 +44,7 @@ function init() {
     var wall1_P = new THREE.BoxGeometry(550, 220, 1), wall2_P = new THREE.BoxGeometry(1, 220, 550);
     var wall_back = new THREE.MeshBasicMaterial({ color: 0x000000 });
 
-    wall1 = new THREE.Mesh(wall1_P, new THREE.MeshBasicMaterial({ color: 0xfdfdfd, map: THREE.ImageUtils.loadTexture('../image/Layout/America/america_wall_1.jpg') }));
+    wall1 = new THREE.Mesh(wall1_P, new THREE.MeshBasicMaterial({ color: 0xfdfdfd, map: THREE.ImageUtils.loadTexture('./image/Layout/America/america_wall_1.jpg') }));
     wall2 = new THREE.Mesh(wall2_P, new THREE.MeshBasicMaterial({ color: 0xfdfdfd, map: THREE.ImageUtils.loadTexture('./image/Layout/America/america_wall_2.jpg') }));
     var wall1_back = new THREE.Mesh(wall1_P, wall_back);
     var wall2_back = new THREE.Mesh(wall2_P, wall_back);
@@ -859,7 +859,7 @@ function ChangeObj(colorDOM, tempOldItem, modelIndex, colorIndex) {
          yScale = $used_tr.dataset.yscale,
          zScale = $used_tr.dataset.zscale;
 
-    loader.load("http://" + window.location.host /*+ "/3DTest"*/ + objPath, "http://" + window.location.host/* + "/3DTest"*/ + mtlPath,
+    loader.load(/*"http://" + window.location.host +*/ objPath, /*"http://" + window.location.host + */mtlPath,
         function (object) {
             isChoosed = false;
             setOriginColor(ChoosedPlane)
