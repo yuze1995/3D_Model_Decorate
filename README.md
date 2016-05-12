@@ -1,4 +1,4 @@
-# 3D-Model-Decorate
+# 3D_Model_Decorate
 It's my five-year junior college final project, and you can put some models to decorate the view.
 
 Just try it!!
